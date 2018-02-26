@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="common/css/index.css">
+    <title>Butcher.y | Brampton's finest butchery | Steak, Pork, Chicken</title>
+</head>
+<body>
+    <section id="header" class="text-center">
+        <img src="common/images/logo2.png" alt="Butchery logo" id="brand-logo">
+        <p id="address-bar">960 MAVIS ROAD | BRAMPTON, ON | (905)492-9667</p>
+
+        <ul id="navigation" class="flex justify-space-around">
+            <li id="nav-home">Home</li>
+            <li id="nav-about">About</li>
+            <li id="nav-order">Order</li>
+            <li id="nav-contact">Contact</li>
+        </ul>
+    </section>
+
+    <div class="jumbotron-image-container"></div>
+
+    <section id="about">
+        <div id="excerpt">
+            <h3><u>ABOUT US</u></h3>
+            <p>We are Brampton's finest butchery located just east of Brimingham Plaza.
+            Specializing in lambs, chicken, pork, steak, and turkey, we will serve
+            you whatever the ocassion may be. You can either order from our website for pickup
+            and delivery or you can just drop by our location, and we'll cut the meat right in 
+            front of you.</p>
+        </div>
+        <section id="hours">
+            <h3><u>HOURS OF OPERATION</u></h3>
+            <p>Monday - Friday : 9AM - 11PM</p>
+            <p>Satuday - Sunday : 6AM - 12PM</p>
+            <p>Holidays : 11AM - 6PM</p>
+        </section>
+    </section>
+
+    <div class="jumbotron-image-container"></div>
+
+    <section id="order">
+        <h3><u>ORDER</u></h3>
+        <form action="#">
+            <input type="text" id="name" placeholder="Name"><br>
+            <input type="text" id="phone" placeholder="Phone no.">
+            <div class="form-group" id="order-type">
+                <button id="delivery" class="active">Delivery</button><button id="pickup">Pickup</button>
+            </div>
+            <div class="form-group" id="meat-type">
+                <p class="form-label">What type of meat are you looking for?</p>
+                <div id="meat-selection">
+                    <div class="thumbnail active">
+                        <img src="common/images/chicken.jpg" alt="chicken image">
+                        <p class="thumbnail-label">Chicken</p>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="common/images/pork.jpg" alt="pork image">
+                        <p class="thumbnail-label">Pork</p>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="common/images/steak.jpg" alt="steak image">
+                        <p class="thumbnail-label">Cow</p>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="common/images/turkey.jpg" alt="turkey image">
+                        <p class="thumbnail-label">Turkey</p>
+                    </div>
+                </div>
+            </div>
+            <textarea id="special-request" cols="30" rows="10" placeholder="Please type your comment or special request here..."></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section id="footer">
+        <p>Thank you for checking us out. We really appreciate it!</p>
+    </section>
+</body>
+<script src="common/js/index.js"></script>
+</html>

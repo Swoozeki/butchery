@@ -1,0 +1,223 @@
+/* primary-color: ff0013 */
+html, body{
+    height: 100%;
+}
+body{
+    margin: 0;
+
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+p{
+    font-size: 1.15em;
+    line-height: 1.6;
+}
+.primary-text-color{
+    color: #ff0013;
+}
+.primary-background-color{
+    background-color: #ff0013;
+}
+
+#brand-logo{
+    width: 200px;
+}
+#address-bar{
+    letter-spacing: 2.5px;
+    margin: 5px 0;
+}
+#header{
+    background-color: #fff;
+    box-shadow: 0px 1px 10px #000;
+    
+    position: fixed;
+    top: 0px;
+    width: 100%;
+
+    padding-top: 5px;
+}
+.text-center{
+    text-align: center;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-space-between{
+    justify-content: space-between;
+}
+.justify-space-around{
+    justify-content: space-around;
+}
+.align-center{
+    align-items: center;
+}
+.align-space-around{
+    align-items: space-around;
+}
+
+.jumbotron-image-container{
+    background-attachment: fixed;
+    background-size: cover;
+}
+.jumbotron-image-container:first-of-type{
+    height: 100vh;
+    background-image: url('../images/meat-jumbotron.jpg');
+}
+.jumbotron-image-container:nth-of-type(2){
+    height: 75vh;
+    background-image: url('../images/meat-jumbotron2.jpg');
+}
+#navigation{
+    margin: 0;
+    padding-left: 0;
+
+    /* background-color: #000; */
+}
+#navigation li{
+    list-style: none;
+    font-size: 1.25em;
+    letter-spacing: 2.5px;
+    padding: 20px 10px;
+
+    color: #ff0013;
+}
+#navigation li:hover{
+    cursor: pointer;
+    color: #a50016;
+}
+#about{
+    display: flex;
+    justify-content: space-around;
+
+    background-color: #a50016;
+    color: #fff;
+
+    padding: 100px 10px;
+}
+#about #excerpt{
+    width: 600px;
+}
+
+#order{
+    background-color: #000;
+    color: #fff;
+
+    padding: 100px 10px;
+}
+#order form > *{ /* applies the below css properties to all direct children of #order form  */
+    margin: 10px 5px;
+    color: #fff;
+}
+#order form input{
+    border: none;
+    border-bottom: 1px solid rgb(86, 86, 86);
+    background-color: transparent;
+
+    font-size: 1.25em;
+}
+#order form input:hover{
+    border-bottom-color: #fff;;
+    transition: border-bottom-color 500ms;
+}
+#order-type button{
+    border: 1px solid rgb(86, 86, 86);
+    outline: none;
+
+    background-color: #000;
+    font-size: 1.25em;
+    padding: 10px 5px;
+}
+#order-type button.active{
+    background-color: #a50016;
+    border-color: #fff;
+    color: #fff;
+}
+#order-type button:hover{
+    cursor: pointer;
+    border-color: #fff;
+    color: #fff;
+}
+#meat-selection{
+    display: flex;
+}
+.thumbnail{
+    border: 1px solid rgb(86, 86, 86);
+    color: rgb(86, 86, 86);
+    border-radius: 5px;
+    padding: 5px;
+}
+.thumbnail:hover{
+    cursor: pointer;
+    color: #fff;
+    border-color: #fff;
+}
+.thumbnail.active{
+    background-color: #a50016;
+    border-color: #fff;
+    color: #fff;
+}
+.thumbnail img{
+    height: 100px;
+    width: 100px;
+}
+.thumbnail-label{
+    margin: 5px 0px;
+}
+#order form button[type="submit"]{
+    border: 1px solid rgb(86, 86, 86);
+    outline: none;
+
+    background-color: #000;
+    font-size: 1.25em;
+    padding: 10px 20px;
+}
+#order form button[type="submit"]:hover{
+    cursor: pointer;
+
+    background-color: #a50016;
+    border-color: #fff;
+    color: #fff;
+}
+#special-request{
+    border: 1px solid rgb(86, 86, 86);
+    border-radius: 5px;
+
+    background-color: #000;
+    font-size: 1.25em;
+    padding: 10px 20px;
+}
+#special-request:hover, #special-request:focus{
+    border-color: #fff;
+    transition: border-color 500ms;
+}
+#footer{
+    text-align: center;
+}
+
+@media(max-width: 680px){
+    #brand-logo{
+        width: 120px;
+    }
+    #address-bar{
+        letter-spacing: 2px;
+        font-size: 0.8em;
+    }
+    #navigation li{
+        letter-spacing: 1.5px;
+        font-size: 1em;
+    }
+    #about{
+        flex-direction: column;
+    }
+    #about #excerpt{
+        width: auto;
+    }
+}
