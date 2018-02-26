@@ -113,6 +113,9 @@ p{
 
     padding: 100px 10px;
 }
+#order form{
+    padding-left: 10px;
+}
 #order form > *{ /* applies the below css properties to all direct children of #order form  */
     margin: 10px 0px;
     color: #fff;
