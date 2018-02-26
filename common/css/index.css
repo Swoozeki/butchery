@@ -1,6 +1,7 @@
 /* primary-color: ff0013 */
 html, body{
     height: 100%;
+    min-height: 100%;
 }
 body{
     margin: 0;
@@ -37,7 +38,7 @@ p{
     
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: 100vw;
 
     padding-top: 5px;
 }
@@ -113,7 +114,7 @@ p{
     padding: 100px 10px;
 }
 #order form > *{ /* applies the below css properties to all direct children of #order form  */
-    margin: 10px 5px;
+    margin: 10px 0px;
     color: #fff;
 }
 #order form input{
@@ -147,6 +148,7 @@ p{
 }
 #meat-selection{
     display: flex;
+    flex-wrap: wrap;
 }
 .thumbnail{
     border: 1px solid rgb(86, 86, 86);
@@ -219,5 +221,8 @@ p{
     }
     #about #excerpt{
         width: auto;
+    }
+    #order form input{
+        width: 90%;
     }
 }
