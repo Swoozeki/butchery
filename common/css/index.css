@@ -122,6 +122,7 @@ p{
 }
 #order form input{
     border: none;
+    outline: none;
     border-bottom: 1px solid rgb(86, 86, 86);
     background-color: transparent;
 
@@ -133,6 +134,7 @@ p{
 }
 #order-type button{
     border: 1px solid rgb(86, 86, 86);
+    color: rgb(86, 86, 86);
     outline: none;
 
     background-color: #000;
