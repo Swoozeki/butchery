@@ -7,16 +7,17 @@ const $about = document.getElementById('about');
 const $order = document.getElementById('order');
 
 $navToHome.onclick = function () {
-    scrollTo(document.body, 0, 1250);
+    scrollTo(document.documentElement, 0, 1250);
 }
 $navToAbout.onclick = function () {
-    scrollTo($about, 0, 1250);
+    scrollTo(document.documentElement, $about.offsetTop-200, 1000);
 }
 $navToOrder.onclick = function () {
-    scrollTo($order, 0, 1250);
+    scrollTo(document.documentElement, $order.offsetTop-200, 1000);
 }
 
 function scrollTo(element, to, duration) {
+    console.log('starting...');
     var start = element.scrollTop,
         change = to - start,
         currentTime = 0,
