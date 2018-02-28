@@ -22,15 +22,15 @@
 
     <div class="jumbotron-image-container"></div>
 
-    <section id="about">
-        <div id="excerpt">
+    <section id="about" class="split-2 split-sm-2 split-center">
+        <section id="excerpt">
             <h3><u>ABOUT US</u></h3>
             <p>We are Brampton's finest butchery located just east of Brimingham Plaza.
             Specializing in lambs, chicken, pork, steak, and turkey, we will serve
             you whatever the ocassion may be. You can either order from our website for pickup
             and delivery or you can just drop by our location, and we'll cut the meat right in 
             front of you.</p>
-        </div>
+        </section>
         <section id="hours">
             <h3><u>HOURS OF OPERATION</u></h3>
             <p>Monday - Friday : 9AM - 11PM</p>
@@ -43,39 +43,63 @@
 
     <section id="order">
         <h3><u>ORDER</u></h3>
-        <form action="#">
-            <input type="text" id="name" placeholder="Name"><br>
-            <input type="text" id="phone" placeholder="Phone no.">
-            <div class="form-group" id="order-type">
-                <button id="delivery" class="active">Delivery</button><button id="pickup">Pickup</button>
-            </div>
-            <div class="form-group" id="meat-type">
-                <p class="form-label">What type of meat are you looking for?</p>
-                <div id="meat-selection">
-                    <div class="thumbnail active">
+        <div class="split-2 split-sm-2 split-center">
+            <form action="#">
+                <input type="text" id="name" placeholder="Name"><br>
+                <input type="text" id="phone" placeholder="Phone no.">
+                <div class="radio-group" id="order-type">
+                    <button id="delivery" class="active" data-price=4.99>Delivery</button><button id="pickup" data-price=0.00>Pickup</button>
+                </div>
+                <p>What type of meat are you looking for?</p>
+                <div class="radio-group" id="meat-type">
+                    <div id="lamb" class="thumbnail active" data-price=20.99>
+                        <img src="common/images/lamb.jpg" alt="lamb image">
+                        <p class="thumbnail-label">Lamb</p>
+                    </div>
+                    <div id="chicken" class="thumbnail" data-price=15.99>
                         <img src="common/images/chicken.jpg" alt="chicken image">
                         <p class="thumbnail-label">Chicken</p>
                     </div>
-                    <div class="thumbnail">
+                    <div id="pork" class="thumbnail" data-price=22.99>
                         <img src="common/images/pork.jpg" alt="pork image">
                         <p class="thumbnail-label">Pork</p>
                     </div>
-                    <div class="thumbnail">
+                    <div id="steak" class="thumbnail" data-price=35.99>
                         <img src="common/images/steak.jpg" alt="steak image">
                         <p class="thumbnail-label">Cow</p>
                     </div>
-                    <div class="thumbnail">
+                    <div id="turkey" class="thumbnail" data-price="18.49">
                         <img src="common/images/turkey.jpg" alt="turkey image">
                         <p class="thumbnail-label">Turkey</p>
                     </div>
                 </div>
+                <textarea id="special-request" placeholder="Please type your comment or special request here..."></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="price">
+                <h4><u>Price: </u></h4>
+                <div class="split-2">
+                    <h5>Subtotal: </h5>
+                    <p id="subtotal">$0</p>
+                </div>
+                <div class="split-2">
+                    <h5>Taxes: </h5>
+                    <p id="taxes">$0</p>
+                </div>
+                <div class="split-2">
+                    <h5>Shipping: </h5>
+                    <p id="shipping">$0</p>
+                </div>
+                <hr>
+                <div class="split-2">
+                    <h5><strong>Total:</strong></h5>
+                    <p id="total">$0</p>
+                </div>
             </div>
-            <textarea id="special-request" cols="25" rows="5" placeholder="Please type your comment or special request here..."></textarea>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
+        </div>
     </section>
-    <section id="footer">
+    <section id="footer" class="text-center">
         <p>Thank you for checking us out. We really appreciate it!</p>
     </section>
 </body>

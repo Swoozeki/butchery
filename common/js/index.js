@@ -17,7 +17,6 @@ $navToOrder.onclick = function () {
 }
 
 function scrollTo(element, to, duration) {
-    console.log('starting...');
     var start = element.scrollTop,
         change = to - start,
         currentTime = 0,
@@ -44,3 +43,61 @@ Math.easeInOutQuad = function (t, b, c, d) {
     t--;
     return -c / 2 * (t * (t - 2) - 1) + b;
 };
+
+let meatPrice = 0,
+    taxPrice = 0,
+    orderPrice = 0,
+    totalPrice = 0;
+
+const $subtotal = document.getElementById('subtotal'),
+    $taxes = document.getElementById('taxes'),
+    $shipping = document.getElementById('shipping'),
+    $total = document.getElementById('total');
+
+const meats = Array.from(document.getElementsByClassName('thumbnail'));
+meats.forEach(meat=>{
+    if(meat.classList.contains('active')){
+        meatPrice = Number(Number(meat.dataset.price).toFixed(2));
+        updateTotal();
+    }
+
+    meat.onclick = function(e){
+      toggleClass('active', meats, meat);
+      meatPrice = Number(Number(meat.dataset.price).toFixed(2));
+      updateTotal();
+    };
+});
+
+const orders = [document.getElementById('pickup'), document.getElementById('delivery')]
+console.log(orders);
+orders.forEach(order => {
+    console.log(order);
+    if(order.classList.contains('active')){
+        orderPrice = Number(Number(order.dataset.price).toFixed(2));
+        updateTotal();
+    }
+
+    order.onclick = function(e){
+        toggleClass('active', orders, order);
+        orderPrice = Number(Number(order.dataset.price).toFixed(2));
+        updateTotal();
+
+        e.preventDefault();
+    }
+});
+
+function updateTotal(){
+    taxesPrice = Number((meatPrice*0.13).toFixed(2));
+    totalPrice = Number((meatPrice+orderPrice+taxPrice).toFixed(2));
+    $subtotal.innerHTML = '$'+meatPrice;
+    $taxes.innerHTML = '$'+taxesPrice;
+    $shipping.innerHTML = '$'+orderPrice;
+    $total.innerHTML = '$'+totalPrice;
+}
+
+function toggleClass(className, elements, chosenElement){
+    elements.forEach(element=>{
+        element.classList.remove(className);
+    });
+    chosenElement.classList.add(className);
+}
